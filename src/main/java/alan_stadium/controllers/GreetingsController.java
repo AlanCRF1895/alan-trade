@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import alan_stadium.client.CepService;
+import alan_stadium.model.Apostas;
 import alan_stadium.model.Endereco;
 import alan_stadium.model.Jogos;
 import alan_stadium.repository.JogosRepository;
@@ -23,9 +24,6 @@ public class GreetingsController {
 	@Autowired
 	private JogosRepository jogosRepository;
 	
-    @Autowired
-    private CepService cepService;
-
     @GetMapping("listatodos")
     public ResponseEntity<List<Jogos>> listaApostas(){
     	
@@ -41,5 +39,5 @@ public class GreetingsController {
     	List<Jogos> jogos = jogosRepository.findAll();
     	return jogos;
     }
-    
+     
 }

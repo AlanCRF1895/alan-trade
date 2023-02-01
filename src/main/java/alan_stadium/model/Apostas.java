@@ -12,7 +12,7 @@ public class Apostas {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private long idAposta;
+	private Long idAposta;
 	
 	private String competicao;
 	private String timeMandante;
@@ -21,14 +21,16 @@ public class Apostas {
 	private String mercado;
 	private BigDecimal stake;
 	private BigDecimal profitLoss;
-	private boolean golFavor;
-	private boolean golContra;
+	private Boolean golFavor;
+	private Boolean golContra;
+	private String esporte;
 	
 	
-	public long getIdAposta() {
+	
+	public Long getIdAposta() {
 		return idAposta;
 	}
-	public void setIdAposta(long idAposta) {
+	public void setIdAposta(Long idAposta) {
 		this.idAposta = idAposta;
 	}
 	public String getCompeticao() {
@@ -73,17 +75,24 @@ public class Apostas {
 	public void setProfitLoss(BigDecimal profitLoss) {
 		this.profitLoss = profitLoss;
 	}
-	public boolean isGolFavor() {
+
+	public Boolean getGolFavor() {
 		return golFavor;
 	}
-	public void setGolFavor(boolean golFavor) {
+	public void setGolFavor(Boolean golFavor) {
 		this.golFavor = golFavor;
 	}
-	public boolean isGolContra() {
+	public Boolean getGolContra() {
 		return golContra;
 	}
-	public void setGolContra(boolean golContra) {
+	public void setGolContra(Boolean golContra) {
 		this.golContra = golContra;
+	}
+	public String getEsporte() {
+		return esporte;
+	}
+	public void setEsporte(String esporte) {
+		this.esporte = esporte;
 	}
 	
 	
