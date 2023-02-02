@@ -4,9 +4,9 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
-
-
 import alan_stadium.manager.ApostasManager;
 import alan_stadium.model.Apostas;
 
@@ -20,6 +20,11 @@ public class ControllerApostas {
 	@GetMapping("listar-apostas")
 	public List<Apostas> listarEstrategiasTodos(){
 		return apostasManager.consultarApostasTodas();
+	}
+	
+	@PostMapping("/cadastrar-apostas")
+	public void cadastrarTimes(@RequestBody Apostas apostas) {
+		apostasManager.cadastrarApostas(apostas);
 	}
 	
 }

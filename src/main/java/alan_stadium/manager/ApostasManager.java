@@ -18,4 +18,8 @@ public class ApostasManager {
 		return apostasRepository.findAll();
 	}
 	
+	public Apostas cadastrarApostas(Apostas apostas) {
+		return apostasRepository.save(apostas);
+	}
+	
 }
